@@ -1,56 +1,69 @@
-# Welcome to your Expo app 👋
+Project Overview
+Yum is a recipe discovery and social networking mobile application designed to help users discover, create and share recipes from different cultures and cuisines.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+The application incorporates a rule-based recommendation algorithm that aims to balance personalised recommendations with unfamiliar cuisines, encouraging users to broaden their tastes and reducing the risk of recommendation filter bubbles.
+Core Features
+- User registration and authentication
+- Recipe discovery, searching and filtering
+- Personalised recipe recommendations
+- Recipe creation, editing and deletion
+- Recipe image uploads
+- Ingredient quantity and serving adjustments
+- Saving and liking recipes
+- Personal recipe collections
+- User profiles, following and commenting
 
-## Get started
+Technologies Used
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- Supabase Authentication
+- Supabase PostgreSQL Database
+- Supabase Storage
+- TheMealDB API
+- AsyncStorage
+- Expo ImagePicker
 
-1. Install dependencies
+Installation and Setup
+Prerequisites
+- Node.js and npm
+- Expo Go installed on a compatible mobile device, or a suitable emulator
 
-   ```bash
-   npm install
-   ```
+1. Install Dependencies
+Open a terminal within the project directory and run:
+npm install
 
-2. Start the app
+2. Configure Environment Variables
+Create a file named .env in the root directory of the project (alongside package.json). Add the following configuration:
 
-   ```bash
-   npx expo start
-   ```
+EXPO_PUBLIC_SUPABASE_URL=https://gagllsmtxqatfzvtcjox.supabase.co
+EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_ecdhNf2_IfbVPe6RcR6qpA_M3-mbN4U
 
-In the output, you'll find options to open the app in a
+These client-side configuration values allow the application to connect to its existing hosted Supabase backend. No administrative credentials are required.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+3. Run the Application
+Start the Expo development server:
+npx expo start
+Scan the generated QR code using Expo Go or launch the application using a compatible emulator.
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+An internet connection is required to access Supabase and TheMealDB.
+Backend and Data Storage
+The application uses an existing hosted Supabase project to manage authentication, user-generated recipes, saved recipes, likes and recipe images.
 
-## Get a fresh project
+Some features, including collections, favourite cuisines, followed creators and comments, currently utilise local storage.
 
-When you're ready, run:
+No separate database installation is required.
+Known Limitations
+- Some locally stored data does not synchronise across devices.
+- The notification system is not currently functional.
+- Account deletion has not yet been implemented.
 
-```bash
-npm run reset-project
-```
+External Resources
+- React Native: https://reactnative.dev/
+- Expo: https://expo.dev/
+- Supabase: https://supabase.com/
+- TheMealDB: https://www.themealdb.com/
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+AI Acknowledgement
+ChatGPT was used to assist with development, code generation, debugging, problem-solving and documentation. Further details and reflection on AI usage are provided in the accompanying project report.
